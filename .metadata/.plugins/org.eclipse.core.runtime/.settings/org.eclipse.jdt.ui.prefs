@@ -5,7 +5,7 @@ content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0
 eclipse.preferences.version=1
 org.eclipse.jdt.ui.formatterprofiles.version=17
-org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java-statements" deleted\="false" description\="print to standard out" enabled\="true" id\="org.eclipse.jdt.ui.templates.sysout" name\="sop">System.out.println(${word_selection}${});${cursor}</template><template autoinsert\="true" context\="java-statements" deleted\="false" description\="print to standard out printf" enabled\="true" name\="sof">System.out.printf(${word_selection}${});${cursor}</template></templates>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="java-statements" deleted\="false" description\="print to standard out" enabled\="true" id\="org.eclipse.jdt.ui.templates.sysout" name\="sp">System.out.println(${word_selection}${});${cursor}</template><template autoinsert\="true" context\="java-statements" deleted\="false" description\="print to standard out printf" enabled\="true" name\="sf">System.out.printf(${word_selection}${});${cursor}</template><template autoinsert\="true" context\="java-statements" deleted\="false" description\="print to standard print" enabled\="true" name\="st">System.out.print(${word_selection}${});${cursor}</template></templates>
 sourceHoverBackgroundColor=236,235,236
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
