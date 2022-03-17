@@ -20,7 +20,7 @@ public class OperatorEx32 {
 		System.out.println();
 		
 		signX = x>0 ? '+' : ( x==0 ? ' ' : '-'); // +
-		signY = y>0 ? '+' : ( y==0 ? ' ' : '-'); // -    /여기 실수했음..
+		signY = y>0 ? '+' : ( y==0 ? ' ' : '-'); // -    //mistake
 		signZ = z>0 ? '+' : ( z==0 ? ' ' : '-'); // ' '
 		
 		System.out.println(signX);
