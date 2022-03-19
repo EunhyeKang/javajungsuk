@@ -24,9 +24,10 @@ public class ArrayEx10 {
 					changed = true;
 				}
 			}
-			
 			if(changed==true)
 			System.out.println("정렬중"+Arrays.toString(num));
+			
+			
 		}
 		
 	}
