@@ -25,7 +25,7 @@ public class MultiArrEx2 {
 //			System.out.println(); //1~25값 셋팅찍어봄. 잘 출력 확
 		}
 		
-		// 빙고판 섞어주기 
+		// 빙고판 섞어주기 (배열에 저장된 값을 뒤섞는다 셔플)
 		for(int i=0; i<SIZE; i++) {
 			for(int j=0; j<SIZE; j++) {
 				int tmp=0;
