@@ -10,11 +10,12 @@ public class quiz4_11 {
 		
 		for(int i=0; i<8; i++) {
 			num3 = num1 + num2;
-			num2 += i;
-			
-			
-			
 			System.out.print(","+num3);
+			
+			num1=num2;
+			num2=num3;
+			
+			
 		}
 	}
 }
