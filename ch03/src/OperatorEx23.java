@@ -7,9 +7,10 @@ public class OperatorEx23 {
 		String str2 = new String("abc");
 		
 		
+		
 		System.out.printf("\"abc\"==\"abc\"? %b%n","abc"=="abc");
-		System.out.printf("\"abc\"==\"str1\"? %b%n","str1"=="abc");
-		System.out.printf("\"abc\"==\"str2\"? %b%n","str2"=="abc");
+		System.out.printf("\"abc\"==\"str1\"? %b%n",str1=="abc");
+		System.out.printf("\"abc\"==\"str2\"? %b%n",str2=="abc");
 		
 		System.out.printf("str1.equals(\"abc\")? %b%n", str1.equals("abc"));
 		System.out.printf("str2.equals(\"abc\")? %b%n", str2.equals("abc"));
