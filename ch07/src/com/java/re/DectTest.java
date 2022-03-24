@@ -19,12 +19,12 @@ class Deck{
 	Deck() {//Deck의 카드를 초기화한다.
 
 		
-	}
+	}/*
 	Card pick(int index) {//지정된 위치(index)에 있는 카드 하나를 꺼내서 반
 	}
 	Card pick(){//덱 에서 카드 하나를 선택한다
 		
-	}
+	}*/
 	
 	void shuffle() {//카드의 순서를 섞는다.
 		
