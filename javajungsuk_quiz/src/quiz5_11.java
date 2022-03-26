@@ -1,5 +1,5 @@
 
-public class quiiz5_11 {
+public class quiz5_11 {
 	public static void main(String[] args) {
 		int [][]score = {
 				{100,100,100},
