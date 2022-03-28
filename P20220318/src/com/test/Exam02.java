@@ -22,7 +22,7 @@ public class Exam02 {
 		}else {
 			result = (float)n2/n1;
 			System.out.printf("answer : %.1f",result);
-			
+			///////
 		}
 	}
 }
