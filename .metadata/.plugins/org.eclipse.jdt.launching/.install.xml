@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-<entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home" stamp="1647367871000"/>
-<entry loc="C:\javautils\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149" stamp="1648104105281"/>
-<entry loc="/Users/eunhyekang/.sdkman/candidates/java/8.0.292-zulu/zulu-8.jdk/Contents/Home" stamp="1647368238000"/>
-<entry loc="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home" stamp="1642702958000"/>
-<entry loc="C:\javautils\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre" stamp="1648104113503"/>
-<entry loc="/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home" stamp="1646031720000"/>
-<entry loc="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home" stamp="1639596310000"/>
+    <entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home" stamp="1647367871000"/>
+    <entry loc="C:\javautils\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149" stamp="1648104105281"/>
+    <entry loc="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home" stamp="1642702958000"/>
+    <entry loc="C:\javautils\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.2.v20210721-1149\jre" stamp="1648104113503"/>
+    <entry loc="/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home" stamp="1646031720000"/>
+    <entry loc="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home" stamp="1639596310000"/>
 </dirs>
