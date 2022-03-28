@@ -17,19 +17,33 @@ public class Exam02 {
 		System.out.print("두번째 정수를 입력하세요>>");
 		n2 = scanner.nextInt();
 
+<<<<<<< HEAD
 		// first code
 		/*
+=======
+		
+		/////
+>>>>>>> 4ee4221c1cd72e316d480e876145418599e1a87b
 		if(n1>n2) {
 			result = (float)n1/n2;
 			System.out.printf("answer : %.1f",result);
 		}else {
 			result = (float)n2/n1;
 			System.out.printf("answer : %.1f",result);
+<<<<<<< HEAD
 			
 		}*/
 		
 		//second code - refactoring
 		result = Math.max(n1, n2)/Math.min(n1, n2);
 		System.out.printf("answer : %.1f",result);
+=======
+
+			///////
+		}
+	
+		}
+
+>>>>>>> 4ee4221c1cd72e316d480e876145418599e1a87b
 	}
 }
