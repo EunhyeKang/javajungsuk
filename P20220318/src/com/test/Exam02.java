@@ -17,7 +17,7 @@ public class Exam02 {
 		System.out.print("두번째 정수를 입력하세요>>");
 		n2 = scanner.nextInt();
 
-		
+		// first code
 		/*
 		if(n1>n2) {
 			result = (float)n1/n2;
@@ -27,5 +27,9 @@ public class Exam02 {
 			System.out.printf("answer : %.1f",result);
 			
 		}*/
+		
+		//second code - refactoring
+		result = (float)Math.max(n1, n2)/Math.min(n1, n2);
+		System.out.printf("answer : %.1f",result);
 	}
 }
