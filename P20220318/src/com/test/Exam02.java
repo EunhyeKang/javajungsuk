@@ -18,19 +18,18 @@ public class Exam02 {
 		n2 = scanner.nextInt();
 
 		
-		/*
+		/////
 		if(n1>n2) {
 			result = (float)n1/n2;
 			System.out.printf("answer : %.1f",result);
 		}else {
 			result = (float)n2/n1;
 			System.out.printf("answer : %.1f",result);
-<<<<<<< HEAD
+
 			///////
 		}
-=======
-			
-		}*/
->>>>>>> 5724f1c063380720f04a152d95526fd0c44b0b64
+	
+		}
+
 	}
 }
