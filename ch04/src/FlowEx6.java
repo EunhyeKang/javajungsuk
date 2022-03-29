@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.xml.soap.SAAJResult;
-
 public class FlowEx6 {
 	public static void main(String[] args) {
 

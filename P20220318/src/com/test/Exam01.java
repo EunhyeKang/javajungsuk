@@ -13,6 +13,7 @@ public class Exam01 {
 		else {System.out.println("result : "+ (num2-num1)); }
 		*/
 		
+		
 //		두번째코드
 		result = Math.max(num1, num2) - Math.min(num2, num1);
 		System.out.println(result);
