@@ -11,10 +11,21 @@ public class Exam04 {
 			arr[i] = (int)(Math.random()*10 + 1);
 			System.out.printf("%d\t",arr[i]);
 		}
+		
 		System.out.println();
+		System.out.println();
+		
 		for(int i=1; i<arr.length; i++) {
-			if(arr[0]>max) {
+			if(arr[i]>max) {
 				max = arr[i];
+			}
+		}
+		System.out.printf("가장 큰 값은 : %d%n",max);
+		System.out.println();
+		
+		for(int num : arr) {
+			if( num >max) {
+				max = num;
 			}
 		}
 		System.out.printf("가장 큰 값은 : %d",max);
