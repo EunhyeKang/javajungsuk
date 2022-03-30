@@ -1,5 +1,6 @@
 package com.java;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -32,10 +33,16 @@ public class MyVector implements List{
 		private void setCapacity(int capacity) {
 			if(this.capacity == capacity)return;//크기가 같으면 변경하지 않는다.
 			
-			Object[] tmp = new Object[capacity];
-			System.arraycopy(data, 0, tmp, 0, size);
-			data = tmp;
+			//배열 생성 후 복사
+//			Object[] tmp = new Object[capacity];
+//			System.arraycopy(data, 0, tmp, 0, size);
+//			data = tmp;
+			
+			//복사 + 배열 생성 한번에
+			Object []tmp = Arrays.copyOf(data, capacity);
+		
 			this.capacity = capacity;
+			
 		}
 		
 		public boolean add(Object obj) {
@@ -97,6 +104,14 @@ public class MyVector implements List{
 			return result;
 		}
 		
+		public String toString() {
+			String tmp = "[";
+			for(int i=0; i<size; i++) 
+				tmp += data[i]+", ";
+				
+				return tmp + "]";
+			
+		}
 		public boolean isEmpty() {return size==0;}
 		public int capacity() {return capacity;}
 		public int size() {return size;}
