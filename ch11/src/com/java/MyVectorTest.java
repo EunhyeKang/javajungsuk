@@ -15,6 +15,7 @@ public class MyVectorTest {
 		
 		System.out.println("capacity:"+v.capacity);
 		
+		//변경해본 ensureCapacity 동작확인 - 2가지방법
 		v.ensureCapacity(30);
 		
 		System.out.println("capacity:"+v.capacity);
