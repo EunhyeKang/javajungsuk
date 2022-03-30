@@ -3,7 +3,7 @@ package com.java;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ArrayListEx1_1 {
+public class ArrayListEx1_1 { //책 예제
 	public static void main(String[] args) {
 		ArrayList list1 = new ArrayList(10);
 		list1.add(new Integer(5));
