@@ -19,8 +19,11 @@ public class Exam05 {
 		System.out.print("금액 >");
 		int price = scanner.nextInt();
 		
-		Book b = new Book(t, w, p, price);
+		Book b = new Book(t, w, p, price); 
 		
-		System.out.println(b);
+		System.out.println(b); //toString() 메소드 호출
+		System.out.println();
+		b.printInfo(); //출력 메서드 호출
+		
 	}
 }

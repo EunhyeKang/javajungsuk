@@ -11,18 +11,27 @@ public class Exam02 {
 
 		Scanner scanner = new Scanner(System.in);
 
+		
 		System.out.print("첫번째 정수를 입력하세요>>");
 		n1 = scanner.nextInt();
 		System.out.print("두번째 정수를 입력하세요>>");
 		n2 = scanner.nextInt();
+<<<<<<< HEAD
 		
 		// 처음 작성한 코드
 		/*
+=======
+
+		// first code
+		/*
+
+>>>>>>> development
 		if(n1>n2) {
 			result = (float)n1/n2;
 			System.out.printf("answer : %.1f",result);
 		}else {
 			result = (float)n2/n1;
+<<<<<<< HEAD
 			System.out.printf("answer : %.1f",result);
 			
 		}
@@ -33,5 +42,15 @@ public class Exam02 {
 		result = (float)Math.max(n1, n2) / Math.min(n1, n2);
 		System.out.printf("answer : %.1f",result);
 		
+=======
+			System.out.printf("answer : %.1f",result);			
+		}*/
+		
+		
+		//second code - refactoring
+		result = (float)Math.max(n1, n2)/Math.min(n1, n2);
+		System.out.printf("answer : %.1f",result);
+
+>>>>>>> development
 	}
 }
