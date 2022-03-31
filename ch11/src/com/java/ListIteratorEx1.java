@@ -22,7 +22,7 @@ public class ListIteratorEx1 {
 		while(it.hasPrevious()) {
 			System.out.print(it.previous());
 		}
-		
+		 
 		System.out.println();
 	}
 }
