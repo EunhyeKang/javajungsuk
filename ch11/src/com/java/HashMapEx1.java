@@ -9,32 +9,32 @@ public class HashMapEx1 {
 		map.put("myId", "1234");
 		map.put("asdf", "1111");
 		map.put("asdf", "1234");
-		
+
 		Scanner s = new Scanner(System.in);
-		
-		while(true) {
+
+		while (true) {
 			System.out.println("id & password >> ");
 			System.out.print("id : ");
 			String id = s.nextLine().trim();
-			
+
 			System.out.print("password : ");
 			String password = s.nextLine().trim();
 			System.out.println();
-			
-			if(!map.containsKey(id)) {
+
+			if (!map.containsKey(id)) {
 				System.out.println("입력하신 id는 존재하지 않습니다. 다시 입력해주세요 ");
 				continue;
-			
-			}else {
-				if(!(map.get(id)).equals(password)) {
+
+			} else {
+				if (!(map.get(id)).equals(password)) {
 					System.out.println("패스워드가 일치하지 않습니다. 다시 입력해주세요 ");
-					
-				}else {
+
+				} else {
 					System.out.println("id pwd 일치합니다");
 					break;
 				}
 			}
-			
+
 		}
 	}
 }
