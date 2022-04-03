@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Car"/>
-    <fullyQualifiedTypeName name="BlockTest"/>
-    <fullyQualifiedTypeName name="Product"/>
-    <fullyQualifiedTypeName name="Document"/>
     <fullyQualifiedTypeName name="CaptionTv"/>
     <fullyQualifiedTypeName name="com.java.Shape"/>
     <fullyQualifiedTypeName name="com.java.Point"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="com.java.ch06.MyTv"/>
+    <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
+    <fullyQualifiedTypeName name="com.java.ch07.SutdaDeck"/>
+    <fullyQualifiedTypeName name="com.java.ch07.SutdaDeck.SutdaCard"/>
+    <fullyQualifiedTypeName name="com.java.ch07.SutdaCard"/>
 </qualifiedTypeNameHistroy>
