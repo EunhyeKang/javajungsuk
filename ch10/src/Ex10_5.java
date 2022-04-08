@@ -8,17 +8,18 @@ public class Ex10_5 {
 		}
 		int year = 2019;
 		int month = 9;
-		int START_DAY_OF_WEEK = 0;
+		int START_DAY_OF_WEEK = 0; // 1일의 요일
 		int END_DAY = 0;
 		
-		Calendar sDay = Calendar.getInstance();
-		Calendar eDay = Calendar.getInstance();
+		Calendar sDay = Calendar.getInstance(); //시작일
+		Calendar eDay = Calendar.getInstance(); //끝일
 		
 		sDay.set(year,8,1); //2019.9.1
 		eDay.set(year,9,1); //2019.10.1
 		//다음달의 첫날에서 하루를 빼면 현재달의 마지막날이
 		eDay.add(Calendar.DATE, -1);
 		
+		//첫번째 요일이 무슨요일인지 알아낸다. 1일이 무슨요일인지 알아낸다.
 		START_DAY_OF_WEEK = sDay.get(Calendar.DAY_OF_WEEK);
 		
 		END_DAY = eDay.get(Calendar.DATE);
