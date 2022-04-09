@@ -22,11 +22,19 @@ class Fighter extends Unit2 implements Fightable{
 	public String toString() {
 		return "x,y에 위치한 적군";
 	}
+	
+	//싸울 수 있는 상대를 불러온다.
+	Fightable getFighter() {
+		Fightable f = new Fighter();
+		return f;
+	}
 }
 public class FighterTest {
 	public static void main(String[] args) {
-		Fightable f = new Fighter();
+		Fighter f = new Fighter();
 		f.move(100, 200);
 		f.attack(new Fighter());
+		
+		Fightable f2 = f.getFighter();
 	}
 }
