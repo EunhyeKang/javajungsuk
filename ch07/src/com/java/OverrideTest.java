@@ -18,6 +18,6 @@ public class OverrideTest {
 //		p.x=3;
 //		p.y=5;
 		System.out.println(p);
-		System.out.println(p.toString());
+//		System.out.println(p.toString());
 	}
 }
