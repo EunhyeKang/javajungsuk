@@ -24,6 +24,7 @@ public class Ex5_12 {
 				count++;
 			}else {
 				System.out.println("wrong");
+				
 			}
 			
 			
