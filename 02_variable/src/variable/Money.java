@@ -1,22 +1,54 @@
 package variable;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Money {
 	public static void main(String[] args) {
-		int num = 0; 
+		 
 		
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.print("Çö±İ ÀÔ·Â >> ");
+		System.out.print("moneyì…ë ¥>> ");
+//		int num = scanner.nextInt();
+//		String input = scanner.nextLine();
+//		System.out.println();
 		
-		System.out.println();
 		
-	
-		System.out.println("Çö±İ : ");
-		System.out.println("ÃµÀÇÀÚ¸® : ");
-		System.out.println("¹éÀÇÀÚ¸® : ");
-		System.out.println("½ÊÀÇÀÚ¸® : ");
-		System.out.println("ÀÏÀÇÀÚ¸® : ");
+		//1)
+//		DecimalFormat df = new DecimalFormat();
+//		System.out.printf("money : " + df.format(num)+"ì›%n");
+//		System.out.printf("ì²œì˜ìë¦¬%dì›%n",num/1000);
+//		num = num%1000;
+//		System.out.printf("ë°±ì˜ìë¦¬%dì›%n",num/100);
+//		num = num%100;
+//		System.out.printf("ì‹­ì˜ìë¦¬%dì›%n",num/10);
+//		num = num%10;
+//		System.out.printf("ì¼ì˜ìë¦¬%dì›%n",num);
+//		System.out.println();
+//		
+		
+		
+		//2)
+//		String [] s = {"ì¼","ì‹­","ë°±","ì²œ"};
+//		int [] n = new int[4];
+//			for(int i=0; i<=3; i++) {	
+//				n[i] = num%10;
+//				num = num/10;
+//			}	
+//			for(int i=3; i>=0; i--) {
+//			System.out.printf("%sì˜ìë¦¬ : %d",s[i], n[i]);
+//			System.out.println();
+//			}
+		
+		
+		//3)
+		String input = scanner.nextLine();
+		
+		for(int i=0; i<input.length(); i++) {
+			System.out.println(input.charAt(i));
+		}
+		
+		
 	}
 }

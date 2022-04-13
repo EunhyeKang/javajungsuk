@@ -13,6 +13,7 @@ public class SungJuk {
 		double avg;
 		
 		Scanner scanner = new Scanner(System.in);
+		
 		System.out.print("이름?");
 		name = scanner.nextLine();
 		
@@ -30,8 +31,11 @@ public class SungJuk {
 		avg = (double)tot/3;
 		
 		System.out.println();
+		System.out.printf("      ***%s성적표***%n",name);
 		System.out.println("국어   영어   수학   총점   평균");
 		System.out.printf(" %2d %6d %6d %6d   %6.3f", kor,eng,math,tot,avg);
+		System.out.println();
+		System.out.printf( kor + "\t"+  eng  +"\t"+  math   +"\t"+  tot  +"\t"+  String.format("%.3f",avg));
 		System.out.println();
 	
 		
