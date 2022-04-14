@@ -32,7 +32,26 @@ public class IfTest3 {
 		}
 		System.out.printf("%d  %d  %d",a,b,c);		
 			
-				
+		
+			
+//		if a가 가장 작다면
+//		else if b가 가장 작다면
+//		else c가 가장 작다면
+		
+		if(a<b && a<c) { //a가 가장 작다면
+			if(b<c) System.out.println(a+","+b+","+c);
+			else System.out.println(a+","+c+","+b);
+		}else if(b<c) { //b가 가장 작다면
+			if(a<c) System.out.println(b+","+a+","+c);
+			else System.out.println(b+","+c+","+a);
+		}else { //c가 가장 작은 값
+			if(a<b) System.out.println(c+","+a+","+b);
+			System.out.println(c+","+b+","+a);
+		}
+		
+		
+	
+		
 	}
 }
 //[문제] if문 사용 

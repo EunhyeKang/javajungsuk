@@ -1,4 +1,4 @@
-package _if;
+package method;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
@@ -12,8 +12,6 @@ public class PayTest {
 	int extraPay; // 수당
 	double rate; //세율
 	
-	
-	
 	Scanner sc = new Scanner(System.in);
 	System.out.print("이름 입력 : ");
 	name = sc.next();
@@ -24,21 +22,42 @@ public class PayTest {
 	System.out.print("수당 입력 : ");
 	extraPay = sc.nextInt();
 	
-	int pay = basePay + extraPay; // 급여 = 기본급 + 수당
-	if( pay >= 4_000_000) rate=0.03; 
+	
+	PayTest pt = new PayTest();
+	int totalPay = pt.calcTotalPay(basePay,extraPay); // 급여 = 기본급 + 수당
+	
+	
+	if( totalPay >= 4_000_000) rate=0.03; 
 	else rate = 0.02;
 	
-	int tax = (int)(pay * rate); // 세금 = 급여 * 세율
-	int salary = pay - tax; // 월급 = 급여 - 세금
+//	int tax = (int)(totalPay * rate); // 세금 = 급여 * 세율
+	int tax = pt.calcTax(totalPay, rate);
+	
+	int salary = pt.calcSalary(totalPay,tax); // 월급 = 급여 - 세금
 	
 	DecimalFormat df = new DecimalFormat();
 	System.out.printf("***%s 월급 명세서***%n",name);
 	System.out.printf("직급 : %s%n%n",title);
 	System.out.println("기본급 \t 수당 \t  급여 \t 세율 \t  세금 \t 월급");
-	System.out.println(df.format(basePay) +" "+ df.format(extraPay) + " "+ df.format(pay) +" "+  (int)(rate*100) + "% "+ df.format(tax) + " "+ df.format(salary));
+	System.out.println(df.format(basePay) +" "+ df.format(extraPay) + " "+ df.format(totalPay) +" "+  (int)(rate*100) + "% "+ df.format(tax) + " "+ df.format(salary));
 	
 	
 	}
+	
+
+	public int calcSalary(int totalPay, int tax) {
+		return totalPay - tax;
+	}
+
+	public int calcTotalPay(int totalPay, int tax){
+		return totalPay+tax;
+	}
+	
+	public int calcTax(int totalPay, double rate) {
+		return (int)(totalPay * rate);
+	}
+	
+	
 }
 /*
  * /*
