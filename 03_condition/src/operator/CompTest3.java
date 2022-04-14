@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CompTest3 {
 	public static void main(String[] args) throws IOException {
 		
-		Scanner scanner = new Scanner(System.in);
+//		Scanner scanner = new Scanner(System.in);
 		
 		System.out.print("문자 입력 : ");
 		int ch = System.in.read(); //int형으로 데이터 입력받음
