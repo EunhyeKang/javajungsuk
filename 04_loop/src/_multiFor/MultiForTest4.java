@@ -4,33 +4,61 @@ public class MultiForTest4 {
 	public static void main(String[] args) {
 		int tmp = 0;
 		
-		for(int i=2; i<=9; i++) {
-			for(int j=1; j<=9; j++) {
-				System.out.printf("%d * %d = %d\t",i,j,i*j);
+		
+		for(int k=1; k<=3; k++) {
+				
+			if(k==1) {
+				for(int i=1; i<=9; i++) {
+					for(int j=2; j<=4; j++) {
+						System.out.printf("%d*%d=%d   ",j,i,i*j);
+					}
+					System.out.println();	
+				}
 			}
-			System.out.println();
+			if(k==2){
+				for(int i=1; i<=9; i++) {
+					for(int j=5; j<=7; j++) {
+						System.out.printf("%d*%d=%d   ",j,i,i*j);
+					}
+					System.out.println();	
+				}
+			}
+			
+			if(k==3){	
+				for(int i=1; i<=9; i++) {
+					for(int j=8; j<=9; j++) {
+						System.out.printf("%d*%d=%d   ",j,i,i*j);
+					}
+					System.out.println();	
+				}
+			}
+			
+			
+			System.out.println();		
 		}
+		
+//
+////		for(int i=0; i<3; i++) {
+//			for(int j=2; j<=9; j++) {
+//				for(int k=1; k<=9; k++) {
+//				System.out.printf("%d*%d=%d  ",k,j,k*j);
+//				}
+//			}
+//			
+////			if(i%3==0)System.out.println();
+////			System.out.println();
+////		}
+		
 		
 		
 	}
 	
 }
+
+
 //[문제] 구구단
 //- 3단씩 끊어서 출력하세요
 //- 3중 for, if문 사용
-//
-//[실행결과]
-//2*1=2   3*1=3   4*1=4
-//
-//5*1=5   6*1=6   7*1=7
-//
-//8*1=8   9*1=9  
-
-
-
-[문제] 구구단
-- 3단씩 끊어서 출력하세요
-- 3중 for, if문 사용
 
 //[실행결과]
 //2*1=2   3*1=3   4*1=4
