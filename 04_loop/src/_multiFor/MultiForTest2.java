@@ -1,4 +1,4 @@
-package _while;
+package _multiFor;
 
 public class MultiForTest2 {
 	public static void main(String[] args) {
