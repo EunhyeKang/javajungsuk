@@ -3,7 +3,7 @@ package _while;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class RPSGame_upgrade2 {
+public class RPSGame_upgrade3 {
 	public static void main(String[] args) throws IOException{
 		
 //		com=1~3 사이의 난수가 발생; //1.가위 2.바위 3.보
@@ -21,6 +21,7 @@ public class RPSGame_upgrade2 {
 			if(1<=user && user<=3) {
 			System.out.print("배팅 금액 입력 : ");
 			bat = scanner.nextInt();
+			
 			
 			
 			//결과를 보시려면 Enter를 치세요... 
@@ -64,20 +65,33 @@ public class RPSGame_upgrade2 {
 				System.out.printf("당신의 금액은 %d원 입니다%n%n",money);
 			}
 				
+			
+			
 			if(money<=0) {
 				System.out.print("잔액이 부족합니다. 또 하시겠습니까(y/n)? : ");
 				String yn = scanner.next();
 				char c = yn.charAt(0);
 				if(c=='y' || c=='Y') {
-					System.out.print("insert coin :");
+					System.out.printf("%ninsert coin :");
 					money = scanner.nextInt();
-					System.out.printf("보유금 : %d원%n%n",money);
+					if(money == 0) {System.out.println("잔액이 부족함으로 게임을 종료합니다.");break;}
+//					System.out.printf("보유금 : %d원%n%n",money);
 				}
 				else if(c=='n' || c=='N') {System.out.println("게임을 종료합니다."); break;}
 				else {System.out.println("잘못입력하셨습니다. 게임을 종료합니다.");break;}
 			}
+			
+			
 		}else System.out.printf("다시입력해주세요(1~3)%n%n");
+			
+		
+			
+			
+			
 		}
+		
+		
+		
 				
 	}
 }
