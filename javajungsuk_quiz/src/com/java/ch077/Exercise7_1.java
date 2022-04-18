@@ -48,21 +48,26 @@ class SutdaDeck{
 }
 
 class SutdaCard{
-	int num;
-	boolean isKwang;
+	//원래 변수앞에 final을 붙일때는 선언과 초기화를 동시에 해야 한다.
+	//그러나 인스턴스 변수의 경우, 선언시에 초기화하지 않고
+	//생성자에서 초기화 할 수 있다.
+	
+	final int NUM;
+	final boolean IS_KWANG;
 	
 	SutdaCard(){
 		this(1,true);
 	}
 	
 	SutdaCard(int num, boolean isKwang){
-		this.num = num;
-		this.isKwang = isKwang;
+		//생성자에서 인스턴스변수 초기화
+		this.NUM = num;
+		this.IS_KWANG = isKwang;
 	}
 	
 	//info()대신 Object클래스의 toString()을 오버라이딩했다.
 	public String toString() {
-		return num + (isKwang ? "K":"");
+		return NUM + (IS_KWANG ? "K":"");
 	}
 }
 
