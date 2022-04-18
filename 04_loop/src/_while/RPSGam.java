@@ -76,11 +76,11 @@ public class RPSGam {
 	       if (money < 0) {
 	          System.out.print("또 하시겠습니까?(y/n) : ");
 	          String ans = scan.next();
-	          if (ans == "Y" || ans == "y") {
+	          if (ans.equals("Y") || ans.equals("y")) {
 	        	  System.out.println("yyyyyyyyy");
 	             money = 1000;
 	            continue;
-	          } else if (ans == "N" || ans == "n") {
+	          } else if (ans.equals("n")) {
 	              System.out.println("종료됨.");
 	             break;
 	          }

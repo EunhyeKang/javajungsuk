@@ -17,10 +17,10 @@ class MyTv2{
 	public void setPowerOn(boolean isPowerOn) {
 		this.isPowerOn = isPowerOn;
 	}
-	public int getChannerl() {
+	public int getChannel() {
 		return channerl;
 	}
-	public void setChannerl(int channerl) {
+	public void setChannel(int channerl) {
 		this.channerl = channerl;
 	}
 	public int getVolume() {
@@ -30,17 +30,25 @@ class MyTv2{
 		this.volume = volume;
 	}
 	
-	
+	public void gotoPrevChannel() {
+//		int prevCh = 
+	}
 	
 }
-public class Exercise7_10 {
+public class Exercise7_11 {
 	public static void main(String[] args) {
 		MyTv2 t = new MyTv2();
 		
-		t.setChannerl(10);
-		System.out.println("CH:"+t.getChannerl());
-		t.setVolume(20);
-		System.out.println("VOL:"+t.getVolume());
+		t.setChannel(10);
+		System.out.println("CH:"+t.getChannel());
+		t.setChannel(20);
+		System.out.println("CH:"+t.getChannel());
+		
+		t.gotoPrevChannel();
+		System.out.println("CH:+t.getChannel()");
+		
+		t.gotoPrevChannel();
+		System.out.println("CH:+t.getChannel()");
 		
 	}
 }

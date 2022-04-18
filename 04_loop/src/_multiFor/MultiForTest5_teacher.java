@@ -1,36 +1,23 @@
 package _multiFor;
 
-public class MultiForTest4 {
+public class MultiForTest5_teacher {
 	public static void main(String[] args) {
+		int dan, i;
 		
-		for(int k=1; k<=3; k++) {	
-			if(k==1) {
-				for(int i=1; i<=9; i++) {
-					for(int j=2; j<=4; j++) {
-						System.out.printf("%d*%d=%d\t",j,i,i*j);
-					}
-					System.out.println();	
-				}
-			}
-			if(k==2){
-				for(int i=1; i<=9; i++) {
-					for(int j=5; j<=7; j++) {
-						System.out.printf("%d*%d=%d\t",j,i,i*j);
-					}
-					System.out.println();	
-				}
-			}
-			
-			if(k==3){	
-				for(int i=1; i<=9; i++) {
-					for(int j=8; j<=9; j++) {
-						System.out.printf("%d*%d=%d\t",j,i,i*j);
-					}
-					System.out.println();	
-				}
-			}		
-			System.out.println();		
-		}		
+		for(int w=2; w<=8; w+=3) { // 3번, w=2, w=5, w=8
+			for(i=1; i<=9; i++) {
+				for(dan=w; dan<=w+2; dan++) {
+					// w 2-4, 5-7, 8-10
+					
+					if(dan!=10) System.out.printf("%d*%d=%d\t",dan,i,dan*i);
+					
+				}//for dan
+				System.out.println();
+			}//for i
+		System.out.println();
+		}//for w
+		
+		
 	}
 }
 

@@ -18,12 +18,14 @@ public class AddGame_upgrade {
 			System.out.printf("[Q%d] %d + %d = ",i+1,a,b);
 			answer = scanner.nextInt();
 			
-			if((a+b) == answer) {
+			if((a+b) == answer) { //정답일때
 				System.out.println("정답입니다.");
-				count++; point+=20;
+				count++; //맞힌개수 
+				point+=20; //보너스점수
 			}
-			else {
+			else { //오답일때
 				if(re==1)break;
+				
 				System.out.println("틀렸습니다.");
 				System.out.printf("한번더 기회! %d + %d = ",a,b);
 				answer = scanner.nextInt();
