@@ -7,7 +7,7 @@ public class RPSGame_upgrade {
 		
 //		com=1~3 사이의 난수가 발생; //1.가위 2.바위 3.보
 		int user;
-		int bat;
+		int bet;
 		int money = 1000; //보유금액 
 		Scanner scanner = new Scanner(System.in);
 		boolean play = true;
@@ -18,18 +18,18 @@ public class RPSGame_upgrade {
 			System.out.print("가위(1),바위(2),보(3)중 번호 입력 : ");
 			user = scanner.nextInt();
 			System.out.print("배팅 금액 입력 : ");
-			bat = scanner.nextInt();
+			bet = scanner.nextInt();
 			
 			
 			
 			if(com==1) {//가위
 				switch(user){
 					case 1: System.out.println("컴:가위 나:가위");System.out.println("You Draw!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 2: System.out.println("컴:가위 나:바위");System.out.println("You Win!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 3: System.out.println("컴:가위 나:보자기");System.out.println("You Lose");
-							money-=bat;break;
+							money-=bet;break;
 				}	
 				System.out.printf("당신의 금액은 %d원 입니다%n%n",money);
 			}
@@ -37,11 +37,11 @@ public class RPSGame_upgrade {
 			else if(com==2) {//바위
 				switch(user){
 					case 1: System.out.println("컴:바위 나:가위"); System.out.println("You Lose!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 2: System.out.println("컴:바위 나:바위");System.out.println("You Draw!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 3: System.out.println("컴:바위 나:보자기");System.out.println("You Win");
-							money-=bat;break;
+							money-=bet;break;
 				}	
 				System.out.printf("당신의 금액은 %d원 입니다%n%n",money);
 			}
@@ -49,11 +49,11 @@ public class RPSGame_upgrade {
 			else if(com==3) {//보
 				switch(user){
 					case 1: System.out.println("컴:보 나:가위");System.out.println("You Win!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 2: System.out.println("컴:보 나:바위");System.out.println("You Lose!!");
-							money-=bat;break;
+							money-=bet;break;
 					case 3: System.out.println("컴:보 나:보자기");System.out.println("You Draw");
-							money-=bat;break;
+							money-=bet;break;
 				}	
 				System.out.printf("당신의 금액은 %d원 입니다%n%n",money);
 			}
