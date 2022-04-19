@@ -2,12 +2,12 @@ package array_1;
 
 import java.util.Scanner;
 
-public class Binary {
+public class Binary2_teacher {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
 		int [] binary = new int [32];
-		int size=0;
+//		int size=0;
 		
 		while(true) {
 			
@@ -19,29 +19,18 @@ public class Binary {
 			if(num==0) break; //0입력시 종료
 			if(num<0) continue; //음수 입력시 재입력
 			
+			int i;
 			
-			
-			for(int i=0; i<binary.length; i++) {
-					
+			for(i=0; num !=0; i++) {//몫이 0이 될때까지 증가조건 증가조건
 					binary[i] = num%2; //나머지를 배열에 담아주고
 					num = num/2; // 몫으로 
-					size++; //binary 배열길이 구하기
-					
-//				System.out.printf("binary[%d]=%d ",i,binary[i]); 
-//				System.out.println();
-//				System.out.println(num);
-				
-				if(num==0)break; // 몫이0이면 멈추기
-	
 			}
-//			System.out.println("size:"+size); //binary 배열길이확인 출력
-			
-			for(int i=size; i>0; i--) {
-				if(i%4==0) System.out.print(" "); //4개씩 끊어찍기
-				System.out.print(binary[i-1]);
-			
+
+			//출력
+			for(int j=i-1 ; j>=0; j--) {
+				System.out.print(binary[j]);
+				if(j%4==0) System.out.print(" "); //4개씩 끊어찍기
 			}
-			size=0; //초기화
 			System.out.println();
 			
 		} //while 
