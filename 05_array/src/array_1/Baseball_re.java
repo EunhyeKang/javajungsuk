@@ -35,13 +35,18 @@ public class Baseball_re {
 		
 		while(flag) { //게임을 실행하겠습니까? yes or no
 			
-			String input = new Scanner(System.in).nextLine(); //  y/n 입력받기 
+			String input = new Scanner(System.in).nextLine(); //  y/n 입력받기
 			
 			if(input.equals("y")||input.equals("Y")) {//게임시작 Y 선택시
 				System.out.print("게임을 시작합니다.\n");
 				
 			
 				while(true) { // 다 맞출때까지 while문 반복
+					
+//					1)문자열로 받아서 한글자씩 뽑아주거나
+//					2)3자리 숫자를 한번에 입력받아서 끊어주기
+
+
 					System.out.print("숫자 입력 : ");
 					int num = new Scanner(System.in).nextInt();
 					
