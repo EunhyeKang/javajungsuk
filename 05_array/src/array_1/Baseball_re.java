@@ -37,10 +37,7 @@ public class Baseball_re {
 			
 			String input = new Scanner(System.in).nextLine(); //  y/n 입력받기 
 			
-			
 			if(input.equals("y")||input.equals("Y")) {//게임시작 Y 선택시
-				
-				
 				System.out.print("게임을 시작합니다.\n");
 				
 			
@@ -48,29 +45,28 @@ public class Baseball_re {
 					System.out.print("숫자 입력 : ");
 					int num = new Scanner(System.in).nextInt();
 					
-					
-					//입력값 user배열에 담기
-					for(int i=user.length-1; i>=0; i--) {
-						user[i] = num%10;
-						num = num/10;
-					}
-					
-					System.out.println();
-					
-					
-					// strike 개수확인
-					for(int i=0; i<com.length; i++) {
-						if(com[i]==user[i]) {
-								strike++;
-						}	
-					}
-					// ball 개수확인
-					for(int k=0; k<com.length; k++) {
-						for(int j=0; j<user.length; j++) {
-							if(com[k]==user[j] && com[j]!=user[j]) // strike랑 중복요소 제거
-									ball++;
+						//입력값 user배열에 담기
+						for(int i=user.length-1; i>=0; i--) {
+							user[i] = num%10;
+							num = num/10;
 						}
-					}
+						
+						System.out.println();
+						
+						
+						// strike 개수확인
+						for(int i=0; i<com.length; i++) {
+							if(com[i]==user[i]) {
+									strike++;
+							}	
+						}
+						// ball 개수확인
+						for(int k=0; k<com.length; k++) {
+							for(int j=0; j<user.length; j++) {
+								if(com[k]==user[j] && com[j]!=user[j]) // strike랑 중복요소 제거
+										ball++;
+							}
+						}
 					
 					System.out.print(strike+"스트라이크 ");
 //					System.out.println((ball-strike)+"볼"); // ball for문에서 중복부분 처리해주기
@@ -95,8 +91,7 @@ public class Baseball_re {
 			else if(input.equals("n")||input.equals("N")){ //게임종료 N 선택시
 				System.out.print("게임을 종료합니다.");
 				flag = false;
-				break; 
-				//종료
+				break; //종료
 			}
 			else { // 잘못입력했을때
 				System.out.println("잘못입력하셨습니다.게임을 실행하시겠습니까(Y/N)");

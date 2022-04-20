@@ -12,3 +12,7 @@ public class Ex4_2 {
 		System.out.println(sum);
 	}
 }
+
+
+
+
