@@ -10,6 +10,16 @@ public class ConstructorTest {
 		System.out.println("기본 생성자");
 	}
 	
+	public ConstructorTest(String name) {
+		this();
+		this.name = name;
+		System.out.println("this = "+this);
+	}
+	
+	public ConstructorTest(int age) {
+		this("네오");//Overload된 다른생성자를 호출
+		this.age = age;
+	}
 	public String getName() {
 		return name;
 	}
