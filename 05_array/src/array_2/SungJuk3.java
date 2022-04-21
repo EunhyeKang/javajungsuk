@@ -1,6 +1,6 @@
 package array_2;
 
-import java.util.Scanner;///////////////삽질삽질삽질
+import java.util.Scanner;//////////////////////삽질삽질삽질
 
 //int [][] ar = new int[3][]; // 가변길이
 //
@@ -8,73 +8,96 @@ import java.util.Scanner;///////////////삽질삽질삽질
 //ar[1] = new int[3];
 //ar[2] = new int[4];
 
-public class SungJuk2 {
+public class SungJuk3 {
 	public static void main(String[] args) {
 		int stuNum, subjectCnt;
-		String name, subject,jumsu;
-		String[][] student = new String[5][];
-		int sum= 0; double avg=0;
+		String [] name, subject,jumsu;
+		
+		int [] sum; double []avg;
 		
 		// 인원수입력
 		System.out.print("인원수 입력:");
-		stuNum = new Scanner(System.in).nextInt();
+		stuNum = new Scanner(System.in).nextInt(); 
 		
-		student[0] = new String[stuNum]; //명수만큼 이름방 잡아주기//*****************
-		
+		String[][] student = new String[5][];
+		name = new String[stuNum]; //배열방생성
+		sum = new int[stuNum];
+		avg = new double[stuNum];
 		
 		for(int i=0; i<stuNum; i++) {//명수만큼 입력받기
 			System.out.printf("%d번째 이름입력 :",i+1);
-			student[0][i] = new Scanner(System.in).nextLine();
+			name[i] = new Scanner(System.in).nextLine();
 			
 			
 			// 과목수 입력
 			System.out.print("과목수 입력:");
 			subjectCnt = new Scanner(System.in).nextInt();
-			student[1] = new String[subjectCnt]; //과목수만큼 방잡아주기//**************
+			student[0] = new String[subjectCnt]; //과목수만큼 방잡아주기//**************
 			
 			for(int j=0; j<subjectCnt; j++) {//과목입력받기
 				System.out.print("과목명 입력:");
-				student[1][j] = new Scanner(System.in).nextLine();	
+				student[i][j] = new Scanner(System.in).nextLine();	
 			}//for j
 			
 			//성적입력
-			student[2] = new String[subjectCnt]; //과목수만큼 방잡아주기//**************
+			student[1] = new String[subjectCnt]; //과목수만큼 방잡아주기//**************
 			for(int j=0; j<subjectCnt; j++) {//성적입력받기
 				System.out.print("성적 입력:");
-				student[2][j] = new Scanner(System.in).nextLine();//**********
-				sum += Integer.parseInt(student[2][j]);
+				student[i][j] = new Scanner(System.in).nextLine();//**********
+				
+				//총점
+				sum[i] += Integer.parseInt(student[1][j]);
+				
 			}//for j	
 			
-//			
-////			student[4] = new String[stuNum]; //인원수만금 총점 방잡기
-////			student[5] = new String[stuNum]; //인원수만큼 평균 방잡기
-//			
 			
+			
+			
+		
+			
+			
+			//평균
+			avg[i] = (double)sum[i]/subjectCnt;
+		
+			
+	
 		}//for i //한명씩 입력 반복
 		
 	
 	
-		
-		//총점
-		for(int k=0; k<student[2].length; k++) {
-//			student[4][k] += Integer.parseInt(student[2][k]);
-		}
 
 		
 		
 		
-		System.out.println("************************************************");
-		System.out.println("이름\t 국어\t 영어\t 수학\t 총점\t 평균\t 학점\t");
-		System.out.println("************************************************");
+		int kk=0;
 		
 		// 출력
-		for (int i = 0; i < student.length; i++) {
+		for (int i = 0; i < name.length; i++) {
 
-			for (int j = 0; j < student[i].length; j++) {
-				System.out.printf(student[i][j]+"\t");
+			
+			
+//			System.out.println("************************************************");
+			System.out.print("이름\t ");
+			
+			for(int j=0; j<student[i].length; j++) {
+				System.out.print(student[kk][j]+" ");
+				kk+=3;
+			}
+			System.out.println("총점\t 평균\t");
+			
+			
+			System.out.printf(name[i]+"\t");//이름
+					
+			for(int k=0; k<student[1].length; k++) { //점수
+				System.out.print(Integer.parseInt(student[1][k])+"\t");	
 			}
 			
+//			for (int j = 0; j < student[i].length; j++) {
+//				System.out.printf(student[i][j]+"\t");
+//			}
 			
+			System.out.printf(sum[i]+"\t"+avg[i]);
+			System.out.println();
 		}
 		
 		

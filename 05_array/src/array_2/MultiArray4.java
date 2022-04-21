@@ -12,14 +12,14 @@ public class MultiArray4 {
 			
 				for(int j=0; j<ar[i].length-1; j++) {
 					
-					ar[i][ar[i].length-1] += ar[i][j]; //행 합
-					ar[ar.length-1][j] += ar[i][j]; //열 합
+					ar[i][ar[i].length-1] += ar[i][j]; //행 합  ar[i][3] += ar[i][j];
+					ar[ar.length-1][j] += ar[i][j]; //열 합 //  ar[3][j] += ar[i][j]; // ar[3][i] += ar[j][i];
 					
-					ar[ar.length-1][ar[i].length-1] += ar[i][j]; 
-				}
-				
-			
+					ar[ar.length-1][ar[i].length-1] += ar[i][j];  //
+				}	
 		}
+		
+		
 		
 		
 		
