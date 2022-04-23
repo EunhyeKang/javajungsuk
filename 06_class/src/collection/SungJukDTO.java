@@ -11,6 +11,15 @@ public class SungJukDTO {
 	double avg;
 	
 	
+	public SungJukDTO(int no, String name, int kor, int eng, int math) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
 	public int getNo() {
 		return no;
 	}
@@ -42,6 +51,7 @@ public class SungJukDTO {
 		this.math = math;
 	}
 	public int getTot() {
+		tot = kor+eng+math;
 		return tot;
 	}
 	public void setTot(int tot) {

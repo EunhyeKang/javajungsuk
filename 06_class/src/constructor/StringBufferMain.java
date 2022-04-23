@@ -3,28 +3,27 @@ package constructor;
 import java.util.Scanner;
 
 public class StringBufferMain {
-	private static int dan;
+//	private static int dan;
 	
 	public static void main(String[] args) {
 //		int dan=0;
 		
 		GuguDan gugudan = new GuguDan();
 		
-		dan = gugudan.input();
+		int dan = gugudan.input();
 		
 		gugudan.output(dan);
-		
-		
+			
 	}
 }
 
 
 class GuguDan{
-	
+	private static int dan;
 	
 	int input() {
 		Scanner scan = new Scanner(System.in);
-		int dan=0;
+//		int dan=0;
 		System.out.print("원하는 단을 입력: ");
 		dan = scan.nextInt();
 		
