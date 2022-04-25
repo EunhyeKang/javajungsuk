@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class SungJukService {
 	private ArrayList<SungJukDTO> list; //이 문장을 고치지 마세요
 	
+//	list = new ArrayList<SungJukDTO>(); //필드에서는 일을 할 수 없다. 
+	//선언만 가능하고 일은 메서드 안으로 들어가자~
+	
 	Scanner scan = new Scanner(System.in);
 	
 	
@@ -44,7 +47,7 @@ public class SungJukService {
 			System.out.print("   번호 선택 : ");
 			num = scan.nextInt();
 			System.out.println();
-			
+			if(num<1||num>6) { System.out.println("다시 입력하세요(1~6)"); continue; }
 			if(num == 1) insertArticle();
 			if(num == 2) printArticle();
 			if(num == 3) searchArticle();

@@ -10,76 +10,84 @@ public class StringMain2 {
 		String s1 = "";
 		String s2 = "";
 		String output = "";
-		int countN = 0;
-		int replaceN = 0;
+		int count = 0;
 		//문자열 입력 : aabba      
 		//현재 문자열 입력 : aa      
 		//바꿀 문자열 입력 : dd
 		//ddbba
 		//1번 치환
-//		
-//		System.out.print("문자열 입력 :");
-//		input = scan.next();
-//		System.out.print("현재 문자열 입력 :");
-//		s1 = scan.next();
-//		System.out.print("바꿀 문자열 입력 :");
-//		s2 = scan.next();
-//		
-//		output = input.replace(s1, s2);
-//		
-//		System.out.println(output);
-//		
-//		
-//		
-//		
-//		for(int i=0; i<input.length(); i++) {
-//			for(int j=0; j<s1.length(); j++) {	
-//				if(input.charAt(i-i)==s1.charAt(j)) {
-//					if( i == s1.length()) {countN++;}
-//				}//if
-//			}//for j
-//		}//for i
-//		replaceN = countN/s1.length();
-//		System.out.println(replaceN+"번 치환");
-//		countN=0; replaceN=0;
-//		
-//		
-//		
-//
-//		System.out.println();
-//		
-//		
-//		//문자열 입력 : aAbbA
-//		//현재 문자열 입력 : aa
-//		//바꿀 문자열 입력 : dd
-//		//ddbba
-//		//1번 치환
-//		
-//		System.out.print("문자열 입력 :");
-//		input = scan.next();
-//		System.out.print("현재 문자열 입력 :");
-//		s1 = scan.next();
-//		System.out.print("바꿀 문자열 입력 :");
-//		s2 = scan.next();
-//		
-//	
-//		String tmp = input.toLowerCase();
-//		output = tmp.replace(s1, s2);
-//		
-//		System.out.println(output);
-////////////
-//		for(int i=0; i<input.length(); i++) {
-//			for(int j=0; j<s1.length(); j++) {	
-//				if(input.charAt(i-i)==s1.charAt(j)) {
-//					if( i == s1.length()) {countN++;}
-//				}//if
-//			}//for j
-//		}//for i
-//		replaceN = countN/s1.length();
-//		System.out.println(replaceN+"번 치환");
-//		countN=0; replaceN=0;
-//		System.out.println();
-//		
+		
+		System.out.print("문자열 입력 :");
+		input = scan.next();
+		System.out.print("현재 문자열 입력 :");
+		s1 = scan.next();
+		System.out.print("바꿀 문자열 입력 :");
+		s2 = scan.next();
+		output = input.replace(s1, s2);
+		System.out.println(output);
+		
+		
+//		System.out.println(s1.indexOf(input));
+		
+//		System.out.println(input.indexOf(s1));
+//		input = input.replaceFirst(input, s2);
+//		System.out.println(input.indexOf(s1));
+//		System.out.println(input.indexOf(s1));
+//		System.out.println(input.indexOf(s1));
+		
+		while(input.indexOf(s1)!=-1) {
+			input= input.replaceFirst(input,s2);
+			count++;
+		}
+		System.out.println("치환은 "+count+" 번");
+		count=0;
+		
+//		while(input.indexOf(s1)!=-1) {
+//			System.out.println("?");
+//			input = input.replaceFirst(input, s1);
+//			count++;	
+//		}
+		
+//		for(int i=0; i<input.length(); i++)
+//			for(int j=0; j<s1.length(); j++)
+//				if(input.charAt(j) == s1.charAt(j)) {
+//					
+//					
+//				}
+//				
+	
+		
+		
+
+		System.out.println();
+		
+		
+		//문자열 입력 : aAbbA
+		//현재 문자열 입력 : aa
+		//바꿀 문자열 입력 : dd
+		//ddbba
+		//1번 치환
+		
+		System.out.print("문자열 입력 :");
+		input = scan.next();
+		System.out.print("현재 문자열 입력 :");
+		s1 = scan.next();
+		System.out.print("바꿀 문자열 입력 :");
+		s2 = scan.next();
+		
+	
+		String tmp = input.toLowerCase();
+		output = tmp.replace(s1, s2);
+		
+		System.out.println(output);
+//////////
+		
+		while(input.indexOf(s1)!=-1) {
+			input= input.replaceFirst(input,s2);
+			count++;
+		}
+		System.out.println("치환은 "+count+" 번");
+		count=0;
 		
 		//------------------------------------------------------
 		
@@ -101,28 +109,16 @@ public class StringMain2 {
 		output = input.replaceAll(s1, s2);
 		
 		System.out.println(output);
-		//////
-		for(int i=0; i<input.length(); i++) {
-			
-			for(int j=0; j<s1.length(); j++) {	
-					
-						
-				
-				
-				
-			}//for j
-		}//for i
+	
 		
 		
-		replaceN = countN/s1.length();
-		System.out.println(replaceN+"번 치환");
-		countN=0; replaceN=0;
-		System.out.println();
-		System.out.println();
+		while(input.indexOf(s1)!=-1) {
+			input= input.replaceFirst(input,s2);
+			count++;
+		}
+		System.out.println("치환은 "+count+" 번");
+		count=0;
 		
-		
-		
-
 		
 		
 		
@@ -144,20 +140,13 @@ public class StringMain2 {
 		output = tmp1.replaceAll(s1, s2);
 		
 		System.out.println(output);
-		/////////
-		for(int i=0; i<input.length(); i++) {
-			for(int j=0; j<s1.length(); j++) {	
-				if(input.charAt(i-i)==s1.charAt(j)) {
-					if( i == s1.length()) {countN++;}
-				}//if
-			}//for j
-		}//for i
-		replaceN = countN/s1.length();
-		System.out.println(replaceN+"번 치환");
-		countN=0; replaceN=0;
-		System.out.println();
-		System.out.println();
 		
+		while(input.indexOf(s1)!=-1) {
+			input= input.replaceFirst(input,s2);
+			count++;
+		}
+		System.out.println("치환은 "+count+" 번");
+		count=0;
 		
 		
 		//문자열 입력 : aabb
