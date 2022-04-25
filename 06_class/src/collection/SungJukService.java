@@ -8,6 +8,7 @@ public class SungJukService {
 	
 	Scanner scan = new Scanner(System.in);
 	
+	
 	void menu() {
 		//menu()
 		//*****************
@@ -21,6 +22,8 @@ public class SungJukService {
 		//1~6중에 선택하세요
 		//	
 		int num=0;
+		
+		
 		while(true) {
 			
 			
@@ -47,7 +50,7 @@ public class SungJukService {
 			
 	}
 	
-	void insertArticle(){
+		void insertArticle(){
 		//[1번인 경우] - insertArticle(), 생성자를 이용
 		//번호 입력 :
 		//이름 입력 :
@@ -64,13 +67,21 @@ public class SungJukService {
 		int tot;
 		double avg;
 		
-		list  = new ArrayList<SungJukDTO>();
+		list = new ArrayList();
+		
 		
 		while(true) {
 			
 			
 		System.out.print("번호 입력 : ");
 		no = scan.nextInt();
+		
+		for(int i=0; i<list.size(); i++) {
+			System.out.println(list.get(i).getNo());
+			if(no == list.get(i).getNo()) {
+				System.out.println("중복된 번호입니다.");
+			}
+		}
 		System.out.print("이름 입력 : ");
 		name = scan.next();
 		System.out.print("국어 입력 : ");
@@ -83,6 +94,8 @@ public class SungJukService {
 		list.add(new SungJukDTO(no,name,kor,eng,math));
 		break;
 		}
+		
+		
 	}
 	
 	
@@ -137,6 +150,10 @@ public class SungJukService {
 		}// for
 		
 		
+		
+		
+		
+		
 	}
 	
 	void deleteArticle() {
@@ -155,7 +172,7 @@ public class SungJukService {
 			}//if
 		}// for
 		
-
+		System.out.println("데이터를 삭제하였습니다.");
 	}
 	
 	

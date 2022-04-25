@@ -10,6 +10,8 @@ public class SungJukDTO {
 	int tot;;
 	double avg;
 	
+//	SungJukService s = new SungJukService();
+	
 	
 	public SungJukDTO(int no, String name, int kor, int eng, int math) {
 		super();
@@ -58,7 +60,8 @@ public class SungJukDTO {
 		this.tot = tot;
 	}
 	public double getAvg() {
-		return avg;
+		double avg = tot/3.0;
+		return avg ;
 	}
 	public void setAvg(double avg) {
 		this.avg = avg;
