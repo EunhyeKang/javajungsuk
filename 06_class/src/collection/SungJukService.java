@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class SungJukService {
@@ -8,6 +9,11 @@ public class SungJukService {
 	
 	Scanner scan = new Scanner(System.in);
 	
+	
+	public SungJukService() {
+		list = new ArrayList<SungJukDTO>();
+		// TODO Auto-generated constructor stub
+	}
 	
 	void menu() {
 		//menu()
@@ -67,21 +73,17 @@ public class SungJukService {
 		int tot;
 		double avg;
 		
-		list = new ArrayList();
-		
-		
-		while(true) {
-			
+	
 			
 		System.out.print("번호 입력 : ");
 		no = scan.nextInt();
 		
-		for(int i=0; i<list.size(); i++) {
-			System.out.println(list.get(i).getNo());
-			if(no == list.get(i).getNo()) {
-				System.out.println("중복된 번호입니다.");
-			}
-		}
+//		for(int i=0; i<list.size(); i++) {
+////			System.out.println(list.get(i).getNo());
+//			if(no == list.get(i).getNo()) {
+//				System.out.println("중복된 번호입니다.");
+//			}
+//		}
 		System.out.print("이름 입력 : ");
 		name = scan.next();
 		System.out.print("국어 입력 : ");
@@ -92,10 +94,8 @@ public class SungJukService {
 		math = scan.nextInt();
 		
 		list.add(new SungJukDTO(no,name,kor,eng,math));
-		break;
-		}
-		
-		
+	
+
 	}
 	
 	
@@ -106,16 +106,20 @@ public class SungJukService {
 		//30      또치      85      92      100      xxx      xx.xx
 		//
 		
-		for(int i=0; i<list.size(); i++) {
-			System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
-			System.out.println(list.get(i).getNo()+"\t"+
-								list.get(i).getName()+"\t"+
-								list.get(i).getKor()+"\t"+
-								list.get(i).getEng()+"\t"+
-								list.get(i).getMath()+"\t"+
-								list.get(i).getTot()+"\t"+
-								list.get(i).getAvg());
-		
+//		for(int i=0; i<list.size(); i++) {
+//			System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
+//			System.out.println(list.get(i).getNo()+"\t"+
+//								list.get(i).getName()+"\t"+
+//								list.get(i).getKor()+"\t"+
+//								list.get(i).getEng()+"\t"+
+//								list.get(i).getMath()+"\t"+
+//								list.get(i).getTot()+"\t"+
+//								list.get(i).getAvg());
+//		
+//		}
+		System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
+		for(SungJukDTO dto : list) {
+			System.out.println(dto);
 		}
 		
 	}
@@ -133,21 +137,29 @@ public class SungJukService {
 		String name = scan.next();
 		
 		
-		for(int i=0; i<list.size();i++) {
-			if(name.equals(list.get(i).getName())) {
-				System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
-				System.out.println(list.get(i).getNo()+"\t"+
-									list.get(i).getName()+"\t"+
-									list.get(i).getKor()+"\t"+
-									list.get(i).getEng()+"\t"+
-									list.get(i).getMath()+"\t"+
-									list.get(i).getTot()+"\t"+
-									list.get(i).getAvg());
-			}// if	
-			else {
-				System.out.println("찾고자 하는 이름이 없습니다.");
+//		for(int i=0; i<list.size();i++) {
+//			if(name.equals(list.get(i).getName())) {
+//				System.out.println("번호\t이름\t국어\t영어\t수학\t총점\t평균");
+//				System.out.println(list.get(i).getNo()+"\t"+
+//									list.get(i).getName()+"\t"+
+//									list.get(i).getKor()+"\t"+
+//									list.get(i).getEng()+"\t"+
+//									list.get(i).getMath()+"\t"+
+//									list.get(i).getTot()+"\t"+
+//									list.get(i).getAvg());
+//			}// if	
+//			else {
+//				System.out.println("찾고자 하는 이름이 없습니다.");
+//			}
+//		}// for
+		
+		for(SungJukDTO dto : list) {
+			if(dto.getName().equals(name)) {
+				System.out.println(dto);
 			}
-		}// for
+			
+			
+		}
 		
 		
 		
@@ -165,14 +177,19 @@ public class SungJukService {
 		String name = scan.next();
 		
 		
-		for(int i=0; i<list.size();i++) {
-			if(name.equals(list.get(i).getName())) {
-				list.remove(i);
-				if(i == list.size())System.out.println("데이터를 삭제하였습니다.");
-			}//if
-		}// for
+		Iterator<SungJukDTO> it = list.iterator();
 		
-		System.out.println("데이터를 삭제하였습니다.");
+		int count=0;
+		while(it.hasNext()) {
+			if(it.next().getName().equals(name)) {
+				it.remove();
+				count++;
+			}
+			
+			
+		}
+		
+		System.out.println("데이터를 "+count+"개 삭제하였습니다.");
 	}
 	
 	

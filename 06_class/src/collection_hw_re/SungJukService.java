@@ -1,6 +1,7 @@
 package collection_hw_re;
 
 import java.util.ArrayList; //java.util
+import java.util.Iterator;
 import java.util.Scanner;
 
 
@@ -145,7 +146,32 @@ public class SungJukService {
 		System.out.print("삭제할 이름 입력 : ");
 		String name = scan.next();
 		
-	
+		int count = 0;
+		
+		Iterator<SungJukDTO> it = list.iterator(); // java.util
+		while(it.hasNext()) { //항목이 있으면 true, 없으면 false;
+			SungJukDTO dto = it.next();// it가 가리키는 곳의 항목을 꺼내서 보관하고 it는 다음으로 이동한다.
+										//Iterator는 일회용이다
+			
+			if(dto.getName().equals(name)) {
+				it.remove(); //it가 가리키는 곳의 항목을 지우는게 아니라
+							// 아까 꺼내놓은 dto를 지운다.
+				//가리킨상태에서 항목이있으면 데이터를 꺼내놓고 자기는 다음위치로 이동한다.
+				//지울땐 이미 움직인 다음 위치에 서 지우는게 아니라 그 전에 있는걸 지운다.
+			count ++;
+			}//if
+		}//while
+		
+		if(count == 0) {
+			System.out.println("삭제하고자 하는 이름이 없습니다.");
+			
+		}
+		else {
+			System.out.println("데이터를 "+count+"건 삭제하였습니다.");
+		}
+		
+		
+		
 		
 		//////이렇게하면 찌꺼기가 남게 된다. 
 		//인덱스0을 삭제시키면 나머지것들의 인덱스가 다시 0 으로 세팅된다.
@@ -168,19 +194,13 @@ public class SungJukService {
 //		}//for
 		
 		
-		
-		
-		
-	
-	
-	}
 	
 	
 	
 	
 	
 	
-	
+	}	
 	
 }
 

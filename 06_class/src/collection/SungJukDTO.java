@@ -10,7 +10,6 @@ public class SungJukDTO {
 	int tot;;
 	double avg;
 	
-//	SungJukService s = new SungJukService();
 	
 	
 	public SungJukDTO(int no, String name, int kor, int eng, int math) {
@@ -20,8 +19,15 @@ public class SungJukDTO {
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
+		
+		this.calc();
+		
 	}
 	
+	public void calc() {
+		tot = eng + math + kor;
+		avg = tot/3.0;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -53,18 +59,25 @@ public class SungJukDTO {
 		this.math = math;
 	}
 	public int getTot() {
-		tot = kor+eng+math;
 		return tot;
 	}
 	public void setTot(int tot) {
 		this.tot = tot;
 	}
 	public double getAvg() {
-		double avg = tot/3.0;
 		return avg ;
 	}
+	
 	public void setAvg(double avg) {
 		this.avg = avg;
 	}
 	
+	public String toString() {
+		return no + "\t" + name + "\t" +
+				kor + "\t" +
+				eng + "\t" +
+				math + "\t" +
+				tot + "\t" +
+				String.format("%.2f", avg);
+	}
 }
