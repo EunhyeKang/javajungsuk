@@ -36,8 +36,9 @@ public class StringMain2 {
 //		System.out.println(input.indexOf(s1));
 		
 		while(input.indexOf(s1)!=-1) {
-			input= input.replaceFirst(input,s2);
+			input= input.replaceFirst(s1,s2);
 			count++;
+			System.out.println(input);
 		}
 		System.out.println("치환은 "+count+" 번");
 		count=0;
@@ -82,9 +83,10 @@ public class StringMain2 {
 		System.out.println(output);
 //////////
 		
-		while(input.indexOf(s1)!=-1) {
-			input= input.replaceFirst(input,s2);
+		while(tmp.indexOf(s1)!=-1) {
+			tmp= tmp.replaceFirst(s1,s2);
 			count++;
+			System.out.println(input);
 		}
 		System.out.println("치환은 "+count+" 번");
 		count=0;
@@ -113,8 +115,9 @@ public class StringMain2 {
 		
 		
 		while(input.indexOf(s1)!=-1) {
-			input= input.replaceFirst(input,s2);
+			input= input.replaceFirst(s1,s2);
 			count++;
+			System.out.println(input);
 		}
 		System.out.println("치환은 "+count+" 번");
 		count=0;
@@ -141,8 +144,8 @@ public class StringMain2 {
 		
 		System.out.println(output);
 		
-		while(input.indexOf(s1)!=-1) {
-			input= input.replaceFirst(input,s2);
+		while(tmp1.indexOf(s1)!=-1) {
+			tmp1= tmp1.replaceFirst(s1,s2);
 			count++;
 		}
 		System.out.println("치환은 "+count+" 번");
