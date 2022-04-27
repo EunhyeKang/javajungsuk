@@ -1,6 +1,10 @@
 import java.util.Calendar;
 import java.util.Scanner;
 
+
+
+//*******
+// 다음달의 1일에서 하루르 빼면 이번달의 마지막 일을 알수있다는 것을 기억하기.
 public class CalendarEx6 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
