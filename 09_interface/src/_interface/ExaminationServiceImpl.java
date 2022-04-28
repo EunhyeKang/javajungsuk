@@ -6,30 +6,16 @@ import java.util.Scanner;
 
 public class ExaminationServiceImpl implements ExaminationService {
 //	private List<ExaminationDTO> list;
-	private List<ExaminationDTO> list = new ArrayList<ExaminationDTO>();
+	private List<ExaminationDTO> list;
 	Scanner scan = new Scanner(System.in);
 	int num;
 
-	@Override
-	public void insertArticle() {
-		System.out.print("인원수 입력 : ");
-		num = scan.nextInt();
-		
-		
-		
-		System.out.print("이름 입력 :");
-		
-		
-		
-		
+	public ExaminationServiceImpl() {
+		list = new ArrayList<ExaminationDTO>(); // 부모 = 자식
 	}
+	
+	
 
-	@Override
-	public void printArticle() {
-		
-	}
-	
-	
 	public void menu() {
 		
 		while (true) {
@@ -46,9 +32,69 @@ public class ExaminationServiceImpl implements ExaminationService {
 			if(select == 2) printArticle();
 			if(select == 3) break;
 			else continue;
-		}
+			
+		}//while
+		
+	}//menu()
+	
+	
+	
+	@Override
+	public void insertArticle() {
+		
+		
+		System.out.print("인원수 입력 : ");
+		num = scan.nextInt();
+		
+		
+		
+		System.out.print("이름 입력 :");
+		String name = scan.next();
+		System.out.print("답 입력 : ");
+		String dap = scan.next();
+		
+//		ExaminationDTO dto = new ExaminationDTO();
+//		dto.setName(name);
+//		dto.setDap(dap);
+		
+		ExaminationDTO dto = new ExaminationDTO(name,dap);
+		dto.compare();
+		
+		list.add(dto);
+		System.out.println("입력이 완료되었습니다.");
+		
+		
 		
 	}
+
+	@Override
+	public void printArticle() {
+		System.out.println("이름\t1 2 3 4 5  점수");
+		
+		//for(int i=0; i<list.size(); i++)
+		for(ExaminationDTO dto : list) {
+			
+			System.out.print(dto.getName() +"\t");
+			for(int i=0; i<dto.getOx().length; i++) {
+				System.out.print(dto.getOx()[i] + " ");
+				
+			}
+			
+			
+			System.out.println(dto.getScore());
+		}
+		
+		
+		System.out.println();System.out.println();
+		
+		for(ExaminationDTO dto : list) {
+			System.out.println(dto);
+		}
+		
+		
+	}
+	
+	
 }
 
 

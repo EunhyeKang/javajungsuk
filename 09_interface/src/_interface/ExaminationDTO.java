@@ -12,6 +12,13 @@ public class ExaminationDTO {
 		ox = new char[5];
 	}
 	
+	public ExaminationDTO(String name, String dap) {
+		this();
+		
+		this.name = name;
+		this.dap = dap;
+	}
+	
 	public void compare() {
 		//   compare() - 비교
 		for(int i=0; i<ox.length; i++) {
@@ -64,6 +71,10 @@ public class ExaminationDTO {
 		return JUNG;
 	}
 	
+	
+	public String toString() {
+		return name + "\t" + ox[0] + "\t" + ox[1]  + "\t"+ ox[2]  + "\t"+ ox[3] + "\t" + ox[4] + "\t" + score;
+	}
 
 	
 }

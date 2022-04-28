@@ -3,9 +3,9 @@ package _interface;
 public class ExaminationMain {
 	public static void main(String[] args) {
 		
-		ExaminationServiceImpl esi = new ExaminationServiceImpl();
-		
-		
+		ExaminationService es = new ExaminationServiceImpl();
+		es.menu();
+		System.out.println("프로그램을 종료합니다.");
 		
 	}
 }
