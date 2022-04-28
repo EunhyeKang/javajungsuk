@@ -2,11 +2,11 @@ package constructor;
 
 class Fruit {
 
-	String pum;
-	int jan, feb, mar;
-	int tot;
+	private String pum;
+	private int jan, feb, mar;
+	private int tot;
 
-	static int sumJan, sumFeb, sumMar;
+	private static int sumJan, sumFeb, sumMar;
 
 	public Fruit(String pum, int jan, int feb, int mar) {
 		this.pum = pum;
@@ -16,10 +16,10 @@ class Fruit {
 	}
 
 	public void calcTot() {
-		tot = jan + feb + mar;	
-		sumJan += jan;
-		sumFeb += feb;
-		sumMar += mar;
+		tot = jan + feb + mar;	//합계
+		sumJan += jan; //1월 합계
+		sumFeb += feb; //2월 합계
+		sumMar += mar; //3월 합계
 	}
 
 	public void display() {

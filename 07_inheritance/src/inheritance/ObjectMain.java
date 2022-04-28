@@ -70,6 +70,9 @@ public class ObjectMain {
 		//ob가 가르치고 있는 객체의 toString을 호출한것임.
 		
 		
+		ob = "hello";  //String pool 이라는 곳에 담김. 
+		ob2 = "hello";
+		
 		System.out.println("ob == ob2 : " + (ob == ob2));            // 주소 비교  false
 		System.out.println("ob.equals(ob2) : " + (ob.equals(ob2))); // 주소 비교  false
 		System.out.println();

@@ -1,7 +1,13 @@
 package _interface;
 
 public class ExaminationMain {
-
+	public static void main(String[] args) {
+		
+		ExaminationServiceImpl esi = new ExaminationServiceImpl();
+		
+		
+		
+	}
 }
 
 //
@@ -11,7 +17,6 @@ public class ExaminationMain {
 //- 점수는 1문제당 20점이다.
 //
 //클래스    : ExaminationDTO.java 
-
 //필드      : String name
 //           String dap
 //           char[] ox ---------------함정부분
@@ -19,16 +24,12 @@ public class ExaminationMain {
 //           public static final String JUNG = "11111"; - 정답
 //메소드    : 생성자, compare(),  setter / getter
 //           compare() - 비교
-
-
 //인터페이스 : ExaminationService.java
 //추상메소드 : 
 //           insertArticle()
 //			 printAriticle()
 
 //클래스 ExaminationServiceImpl.java
-
-
 
 
 //[실행결과]
