@@ -1,6 +1,6 @@
 package collection;
 
-public class SungJukDTO {
+public class SungJukDTO implements Comparable<SungJukDTO>{
 	
 	int no;
 	String name;
@@ -80,4 +80,28 @@ public class SungJukDTO {
 				tot + "\t" +
 				String.format("%.2f", avg);
 	}
+
+
+	
+	
+
+	@Override  //내림차순
+	public int compareTo(SungJukDTO p) {
+		
+		if(this.tot < p.tot) return 1;
+		else if(this.tot > p.tot) return -1;
+//		else if(this.age == p.age) return 0;
+		else return 0;
+		
+	}
+	
+
+	
+	
+	
+	
+
+
+
+
 }

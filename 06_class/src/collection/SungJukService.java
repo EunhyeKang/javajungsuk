@@ -1,6 +1,8 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -42,7 +44,8 @@ public class SungJukService {
 			System.out.println("  2. 출력");
 			System.out.println("  3. 검색");
 			System.out.println("  4. 삭제");
-			System.out.println("  5. 끝");
+			System.out.println("  5. 정렬");
+			System.out.println("  6. 끝");
 			System.out.println("*********************");
 			System.out.print("   번호 선택 : ");
 			num = scan.nextInt();
@@ -52,13 +55,16 @@ public class SungJukService {
 			if(num == 2) printArticle();
 			if(num == 3) searchArticle();
 			if(num == 4) deleteArticle();
-			if(num == 5) break;
+			if(num == 5) sortArticle();
+			if(num == 6) break;
 		
 		}
 			
 			
 	}
 	
+		
+
 		void insertArticle(){
 		//[1번인 경우] - insertArticle(), 생성자를 이용
 		//번호 입력 :
@@ -163,14 +169,77 @@ public class SungJukService {
 			
 			
 		}
-		
-		
-		
-		
-		
+
 		
 	}
 	
+	
+	 void sortArticle() {
+		 
+		while(true) {
+		 System.out.println("1.이름으로 오름차순");
+		 System.out.println("2.총점으로 내림차순");
+		 System.out.println("3.이전메뉴");
+		 System.out.print("선택 : "	);
+		 int num = scan.nextInt();
+		 
+		 
+		 if(num == 1) {
+			 
+			 	Collections.sort(list);
+			 	this.printArticle();
+			 	
+//				Comparator<SungJukDTO> com = new Comparator<SungJukDTO>() {
+//					@Override
+//					public int compare(SungJukDTO p1, SungJukDTO p2) {
+//						return p1.getName().compareTo(p2.getName());
+//					}
+//				};
+//				
+//				System.out.println("정렬 전 = " + list);
+//				Collections.sort(list,com);
+//				System.out.println("정렬 후 = " + list);
+				
+			 
+		 }
+		 else if(num == 2) {
+			 
+			 	Comparator<SungJukDTO> com = new Comparator<SungJukDTO>() {
+			 		
+			 		public int compare(SungJukDTO s1, SungJukDTO s2) {
+			 			//조건 연산자
+			 			//조건 ? 참 : 거짓
+			 			
+			 			return s1.getTot() <s2.getTot() ? 1 : -1;
+			 			
+			 		}
+			 	};
+			 
+			 	Collections.sort(list,com);
+			 	this.printArticle();
+			 	
+			 	
+//				System.out.print("정렬 전 = " + list );
+//				System.out.println();
+//				
+//				Collections.sort(list);  //배열 솔트할땐 Arrays.sort  컬렉션 솔트할땐 Collections.sort()
+//				
+//				System.out.println("정렬 후 = " + list );
+			 
+			 
+		 }
+		 else if(num == 3) { break; }
+		  
+		 
+		}
+		 
+		 
+	 }
+	 
+	 
+	 
+	 
+	 
 	void deleteArticle() {
 		//[4번인 경우] - deleteArticle() - 똑같은 이름이 있으면 모두 삭제
 		//삭제 할 이름 입력 : 홍길동
@@ -188,8 +257,6 @@ public class SungJukService {
 				it.remove();
 				count++;
 			}
-			
-			
 		}
 		
 		System.out.println("데이터를 "+count+"개 삭제하였습니다.");
