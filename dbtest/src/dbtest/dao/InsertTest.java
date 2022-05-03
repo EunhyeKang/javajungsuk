@@ -27,7 +27,7 @@ public class InsertTest {
 	
 	private Connection conn;      //원래 이렇게 전역 잡으면 안됌.   //나중에 properties나 xml로 빼버릴거임
 									//import요청뜨는데 java.sql에 속한다.
-	private PreparedStatement pstmt; // 오라클의 명령어를 처리해주는 애들. 
+	private PreparedStatement pstmt; // 오라클의 명령어를 처리(통역)해주는 애들. 	 java 통역 oracle
 	
 	
 	public InsertTest() {
@@ -99,10 +99,11 @@ public class InsertTest {
 			//자바는 자동커밋된다. 그래서 바로 확인 가능하다.
 			
 			String sql = "insert into dbtest values(?,?,?,sysdate)"; 
+		
 			
 //			pstmt = conn.prepareStatement("insert into dbtest values(?,?,?,sysdate)"); // 
 			pstmt = conn.prepareStatement(sql); // 
-			//?에 데이터 주입
+			//?에 데이터 주입 (이렇게 하면 데이터노출을 막을 수 있음)
 			pstmt.setString(1, name);
 			pstmt.setInt(2, age);
 			pstmt.setDouble(3, height);

@@ -36,6 +36,7 @@
 		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
 		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\Renee\Desktop\강은혜.zip"/>
 			<item value="C:\Users\Renee\Desktop\src_(1).zip"/>
 			<item value="C:\Users\Renee\Documents\java_se\workspace\toyGame\src_(1).zip"/>
 		</list>
