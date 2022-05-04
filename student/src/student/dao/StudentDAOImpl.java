@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class StudentDAOImpl implements StudentDAO{
 	private String driver = "oracle.jdbc.driver.OracleDriver";   
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe"; 
+//	private String url = "jdbc:oracle:thin:@192.168.0.19:1521:xe"; 
 	private String username = "c##java";
 	private String password = "oracle";
 	
@@ -76,6 +77,7 @@ public class StudentDAOImpl implements StudentDAO{
 		
 		try {
 			int num = scan.nextInt();
+			//DB - insert
 			String sql = "insert into student values(?,?,?)";
 			
 			System.out.print("이름입력 : ");
@@ -109,7 +111,6 @@ public class StudentDAOImpl implements StudentDAO{
 
 	@Override
 	public void selectArticle() {
-		this.getConnection();
 		String sql="";
 		String name="";
 		
@@ -125,6 +126,9 @@ public class StudentDAOImpl implements StudentDAO{
 			System.out.print("검색할 이름 입력 : ");
 			name = scan.next();
 			sql = "select * from student where name like ?";
+			
+			getConnection();
+			
 			try {
 				pstmt = conn.prepareStatement(sql);
 				pstmt.setString(1, "%"+name+"%");
@@ -193,7 +197,7 @@ public class StudentDAOImpl implements StudentDAO{
 	
 	public void closeJdbc() {
 		try {
-			if(rs != null) rs.close();  
+			if(rs != null) rs.close();   //if문으로 걸렸기 때문에 공통으로 적용할수 있다. null 이라는것은 객체생성이 안되었다는것. 실행중X / !null은 객체가 생성되서 실행중이라는 얘기이기때문에 닫아줘야한다!
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();
 		}catch(SQLException e) {
